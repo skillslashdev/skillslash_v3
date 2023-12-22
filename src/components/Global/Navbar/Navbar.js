@@ -47,7 +47,7 @@ const Navbar = ({
   const [icon, setIcon] = useState(false);
   const [popups, setPopups] = useState(false);
   const [mobile, setMobile] = useState(false);
-  
+
   useEffect(() => {
     let width = window.innerWidth;
     if (width < 481) {
@@ -108,37 +108,35 @@ const Navbar = ({
       </Popup>
       <nav className={styles.nav}>
         <div className={styles.left}>
-        
           {/*<FaBars
             className={styles.ham}
             onClick={() => {
               showMenu();
               setIcon(false);
             }}*/}
-          
-          {
-            !show?
+
+          {!show ? (
             <FaBars
-            className={styles.ham}
-            onClick = {() =>{
-              showMenu();
-              setIcon(false);
-              ;}}
-          />:
-          <p className={styles.ham} style = {{fontSize: "45px", margin:"0"} }
-            onClick = {() =>{
-              showMenu();
-              setIcon(false);
-            
-              
-            }}>⨯
+              className={styles.ham}
+              onClick={() => {
+                showMenu();
+                setIcon(false);
+              }}
+            />
+          ) : (
+            <p
+              className={styles.ham}
+              style={{ fontSize: "45px", margin: "0" }}
+              onClick={() => {
+                showMenu();
+                setIcon(false);
+              }}
+            >
+              ⨯
+            </p>
+          )}
 
-          </p>
-          
-          }
-          
-
-        <div className={show ? styles.mobileWrapper : styles.hide}>
+          <div className={show ? styles.mobileWrapper : styles.hide}>
             <div className={styles.mobileMenu}>
               <span onClick={showMenu}>
                 <Link href="/event">Events</Link>
@@ -152,12 +150,12 @@ const Navbar = ({
               </span>
 
               <span onClick={showMenu}>
-                <a href="/blog">Blogs</a>
+                <Link href="/blog">Blogs</Link>
               </span>
             </div>
-          </div> 
+          </div>
 
-          <a href="/">
+          <Link href="/">
             <Image
               src="https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/web/New-UI/Skillslash-logo-new.png"
               alt="Skillslash"
@@ -166,7 +164,7 @@ const Navbar = ({
               width={180}
               height={60}
             />
-          </a>
+          </Link>
           <button
             onMouseEnter={() => setIcon(true)}
             onMouseOver={() => setIcon(true)}
@@ -225,7 +223,7 @@ const Navbar = ({
                 <Link href="/Contact-us">Contact us</Link>
               </span>
               <span>
-                <a href="/blog">Blog</a>
+                <Link href="/blog">Blog</Link>
               </span>
               <button onClick={popupShow}>
                 Apply Now <MdOutlineArrowForward />

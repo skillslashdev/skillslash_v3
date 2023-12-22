@@ -21,7 +21,7 @@ export default function Home() {
       <FirstSection />
       <Tabs />
       <Certificate />
-      <ProjectSlider heading="Hands-on Projects" />
+      <ProjectSlider heading="Hands-on Projects" redirectDs={true} />
       <Bootcamp />
       {/* <main className="grid grid-cols-[60%,40%] bg-slate-200">
         <div className="flex flex-col gap-3">
