@@ -451,15 +451,17 @@ const Tabs = () => {
                   <div className={styles.gridImg}>
                     <Image
                       src="https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/New_skillslash/Homepage/Advance-data-course.png"
-                      alt="business analytics course"
-                      width={406}
-                      height={199}
+                      alt="data science course"
+                      width={232}
+                      height={250}
                       className={styles.gridBanner}
                       loading="lazy"
                     />
                   </div>
                   <div className={styles.gridInnerBox}>
-                    <h4>Business Analytics Program For Professionals</h4>
+                    <h4 className="mb-1">
+                      Business Analytics Program For Professionals
+                    </h4>
                     <div>
                       <span>
                         <BsCheck className={styles.gridIcon} /> 350+ hrs
@@ -482,50 +484,16 @@ const Tabs = () => {
                         Certification
                       </span>
                     </div>
-
-                    <div className="flex gap-3">
-                      <button className="border-2 border-[#f18350] border-solid bg-transparent px-1 py-1 text-[#f18350] font-normal text-sm">
+                    <div className="flex gap-3 mt-2">
+                      <button className="border-[1px] border-[#646464] border-solid bg-transparent px-[9px] py-1 text-[#646464] font-normal text-xs">
                         View Details
                       </button>
-                      <Link href="/business-analytics-course">
+                      <Link href="/advanced-data-science-and-ai-course-with-real-work-experience">
                         <button className={styles.gridBtn}>
                           Start Learning
                         </button>
                       </Link>
                     </div>
-                  </div>
-                </div>
-
-                <div className={styles.gridBox}>
-                  <div className={styles.gridImg}>
-                    <Image
-                      src="https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/web/New-UI/fCourse.webp"
-                      alt="full stack course"
-                      width={406}
-                      height={253}
-                      className={styles.gridBanner}
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className={styles.gridInnerBox}>
-                    <h4>Full Stack Developer Course With Certification</h4>
-                    <div className={styles.lines}></div>
-                    <span>
-                      <BsCheck className={styles.gridIcon} />
-                      10 Months
-                    </span>
-                    <span>
-                      <BsCheck className={styles.gridIcon} />
-                      5+ Industry Projects
-                    </span>
-                    <span>
-                      <BsCheck className={styles.gridIcon} />
-                      EMI @INR 7916/month
-                    </span>
-                    <div className={styles.line}></div>
-                    <Link href="/full-stack-developer-course">
-                      <button className={styles.gridBtn}>View Program</button>
-                    </Link>
                   </div>
                 </div>
               </div>
